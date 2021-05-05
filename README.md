@@ -27,8 +27,6 @@ The final model implements the most predictive features from 3 different dataset
 - **`X`** - Longitude
 - **`Y`** - Latitude
 
-Source: https://www.kaggle.com/c/sf-crime/data
-
 ------
 
 **`San Francisco Weather Dataset`** - Scraped weather data for every day in the *San Francisco Crime Classification Dataset*. It contains *4516* records.
@@ -39,8 +37,6 @@ Source: https://www.kaggle.com/c/sf-crime/data
 - **`wind_speed`** - Wind speed *(km/h)*
 - **`visibility`** - Visibility *(km)*
 - **`moon_illumination, %`** - Moon phase and illumination *(Name of phase, %)*
-
-Source: Scraped from https://wunderground.com/
 
 ------
 
@@ -66,7 +62,7 @@ The plot above represents the cumulative crimes per year. It is essential to men
 
 ####  Average Daily Crimes vs. Day of Month
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20day%20of%20month.png?raw=true)
 
 During the exploratory data analysis, an interesting finding was that the first day tends to have crime rates xx% higher than the monthly average. The reason behind this pattern could be something as simple as this being how police in San Francisco file crime reports. Another possible cause could be that the U.S. government tends to pay Supplemental Security Income and Welfare checks on the first day of every month, potentially increasing the number of robbery targets.
 
@@ -74,7 +70,7 @@ During the exploratory data analysis, an interesting finding was that the first 
 
 #### Crimes by Day of the Week
 
-![crimes by day of the week](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
+![crimes by day of the week](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20day%20of%20the%20week.png?raw=true)
 
 Crimes rates vary between days of the week, being Friday the day in which most crimes are committed on average while Sunday has the lowest crime rates of all days of the week. Please note that although the variations of crime rates between different days of the week seem to be relatively small, the day of the week plays a vital role in improving our model's accuracy.
 
@@ -82,7 +78,7 @@ Crimes rates vary between days of the week, being Friday the day in which most c
 
 #### Average Crimes per Hour
 
-![crimes per hour](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
+![crimes per hour](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20per%20hour.png?raw=true)
 
 The hour of the day also plays an important role when trying to predict crime rates. You can appreciate how 4:00 am - 5:00 am have the lowest crime rates. As we increase the hour, the crime rates increase on average until we reach 5:00 pm. After 6:00 pm, crime rates tend to decrease until 4:00 am where the cycle repeats. Although the hour of the day is relevant to the predictions of the model, I decided not to use it as a feature because the dataset would suffer a significant reduction because of many hours of the day that lack crime records. Additionally, having criminal records in a daily is consistent with the weather and football datasets.
 
@@ -90,7 +86,7 @@ The hour of the day also plays an important role when trying to predict crime ra
 
 #### Crimes by Category
 
-![crimes by category](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20category.png?raw=true)
+![crimes by category](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20category.png?raw=true)
 
 From the plot above, it was evident that larceny and theft lead as the most common crimes in San Francisco. For this project, I decided not to include the crime category as a feature in the machine learning model. However, I consider that this could be a useful future implementation that could help law enforcement make better decisions regarding the distribution of police officers based on the severity of the predicted crimes.
 
@@ -98,7 +94,7 @@ From the plot above, it was evident that larceny and theft lead as the most comm
 
 #### Crimes by Police Department District - Bar Chart
 
-![crimes by police department](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
+![crimes by police department](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/crimes%20by%20police%20department.png?raw=true)
 
 It is expected for crimes not to be evenly distributed across different police department districts, especially taking into consideration that the area of these districts varies in shape and size. The plot above clearly highlights the crime distribution, and it tells us that some police department districts need more resources than others. The machine learning model uses the police department district to predict the crime rates for each zone as they vary significantly between areas.
 
@@ -106,7 +102,7 @@ It is expected for crimes not to be evenly distributed across different police d
 
 #### Crimes by Police Department District - Map
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/Cumulative%20Crime%20Map%20labeled.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/Cumulative%20Crime%20Map%20labeled.png?raw=true)
 
 The plot above is a visual representation of the crime count for each Police Department District in San Francisco where the darker colors denote a greater crime count.
 
@@ -114,7 +110,7 @@ The plot above is a visual representation of the crime count for each Police Dep
 
 #### Crimes Resolutions
 
-![crime resolutions](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
+![crime resolutions](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/crime%20resolutions.png?raw=true)
 
 It is interesting to see the distribution of crime resolutions. Unfortunately, when trying to predict the crime rates, the resolutions are not available before a crime occurs. For the previously mentioned reason, I decided to exclude the resolution of the crimes as a feature for the machine learning model.
 
@@ -122,7 +118,7 @@ It is interesting to see the distribution of crime resolutions. Unfortunately, w
 
 #### Correlation Matrix
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/correlation%20matrix.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/correlation%20matrix.png?raw=true)
 
 
 
@@ -132,7 +128,7 @@ From the correlation matrix above, we can quickly determine that the average dai
 
 #### Mean Daily Crimes vs. Mean Daily Temperature
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/daily%20crimes%20vs%20temperature.png?raw=true)
 
 The plot above depicts a correlation between the average daily crimes and the average daily temperature. It is evident that as temperature increases, so does crime.
 
@@ -140,7 +136,7 @@ The plot above depicts a correlation between the average daily crimes and the av
 
 #### Comparison of Crime Between NFL Game Day and Regular Day
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/game%20day%20vs%20regular%20day.png?raw=true)
 
 Most of the crime reports happen to be in a day when the San Francisco 49ers don't play. This could be due to the way in which police reports are filed, maybe most police officers wait until the next day to file reports, or most people don't commit crimes during game day, or most people don't report crimes during game days.
 
@@ -148,7 +144,7 @@ Most of the crime reports happen to be in a day when the San Francisco 49ers don
 
 #### Comparison of Crime Between NFL Home Game and Away Game
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/home%20game%20vs%20away%20game.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/home%20game%20vs%20away%20game.png?raw=true)
 
 Crime rates seem to remain the same between those days in which the 49ers play home and those days in which they play away.
 
@@ -156,7 +152,7 @@ Crime rates seem to remain the same between those days in which the 49ers play h
 
 #### Comparison of Crime Between NFL Win and Loss
 
-![](https://github.com/fescobar96/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
+![](https://github.com/3maaza/Crime-Prediction-in-San-Francisco/blob/master/images/nfl%20win%20vs%20loss.png?raw=true)
 
 Once again, there doesn't seem to be any difference in the crime rates if the San Francisco 49ers either lose or win a game.
 
